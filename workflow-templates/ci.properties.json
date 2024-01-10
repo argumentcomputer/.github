@@ -1,0 +1,13 @@
+{
+    "name": "CI Testing Workflow",
+    "description": "CI starter workflow.",
+    "iconName": "octicon checklist",
+    "categories": [
+        "Rust",
+        "testing"
+    ],
+    "filePatterns": [
+        "Cargo.toml"
+    ]
+}
+

@@ -1,0 +1,49 @@
+name: GPU Tests and Benchmarks
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review]
+    branches: [ $default-branch, 'feat/**', release-candidate ]
+  merge_group:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    # Requires a self-hosted Nvidia GPU runner attached to the repo
+    # Uncomment to run on `merge_group` only, as these tests/benchmarks can be expensive
+    # if: github.event_name != 'pull_request' || github.event.action == 'enqueued'
+    # Change the label to `gpu-bench` for a benchmark runner
+    runs-on: [self-hosted, gpu-ci]
+    steps:
+      # Set CI-related env vars
+      - uses: actions/checkout@v4
+        with:
+          repository: lurk-lab/ci-workflows
+      # Set GPU env vars and test driver/`nvcc` access
+      - uses: ./.github/actions/gpu-setup
+        with:
+          # Switch to 'opencl' to support CUDA+OpenCL
+          gpu-framework: 'cuda'
+      - uses: ./.github/actions/ci-env
+      - uses: actions/checkout@v4
+        # Uncomment for lurk-rs or other repos with submodules
+        #with:
+        #  submodules: recursive
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: taiki-e/install-action@nextest
+      - uses: Swatinem/rust-cache@v2
+      # Run some tests
+      #- name: CUDA tests
+      #  run: |
+      #    cargo nextest run --profile ci --cargo-profile dev-ci --features cuda
+      # Or run some benchmarks
+      #- name: Install criterion
+      #  run: |
+      #    cargo install cargo-criterion
+      #- name: CUDA benchmarks
+      #  run: |
+      #    cargo criterion --bench <bench_name> --features "cuda"
+
