@@ -1,0 +1,14 @@
+{
+    "name": "GPU Testing/Benchmarking Workflow",
+    "description": "GPU starter workflow.",
+    "iconName": "octicon cloud",
+    "categories": [
+        "Rust",
+        "Cuda",
+        "testing"
+    ],
+    "filePatterns": [
+        "Cargo.toml"
+    ]
+}
+
