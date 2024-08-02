@@ -44,7 +44,7 @@ Visit us on the web at https://argument.xyz
 Come hang out on our [Zulip](https://zulip.argument.xyz). 
 
 ## Twitter
-Follow [@Argument_xyz](https://twitter.com/argument_xyz) on Twitter.
+Follow [@argument_xyz](https://twitter.com/argument_xyz) on Twitter.
 
 ## License
 MIT or Apache 2.0
