@@ -1,38 +1,50 @@
-# Welcome to Lurk Lab
+# Welcome to Argument Computer Corporation
 <p align="center">
-  <img width="250" height="250" src="/lurk-lab-logo.png">
+  <img width="1000" height="192" src="/ArgumentComputerCorp_logo.png">
 </p>
 
-# Lurk Lang
-Lurk is an in-development, Turing-complete programming language for recursive zk-SNARKs.
+<br />
 
-## Disclaimer
+# Our Mission
+We are building the tools to accelerate verifiable computing. 
+
+<br />
+
+# Our Products
+
+## Lurk
+Lurk is a programming language build for the domain of zero-knowledge proofs. 
+
+[```lurk```](https://github.com/argumentcomputer/lurk) is a Common Lisp reference implementation of Lurk. This implementation only supports expression evaluation. The [language specification](https://github.com/argumentcomputer/lurk/blob/master/spec/v0-1.md) lives in this repo, and the implementation provided there aims for simplicity and demonstration of the intended semantics without the proving tools of ```lurk-rs```.
+
+[```lurk-rs```](https://github.com/argumentcomputer/lurk-rs) is the Rust implementation of Lurk, which generates binaries via ```rustc```. The Rust implementation supports expression evaluation, proof of correct evaluation, and proof verification. ```lurk-rs``` also provides preliminary support for WASM.
+
+### Disclaimer
 **DISCLAIMER:** Lurk is an early research-stage language. Neither the cryptography nor the software has been audited, and there is currently no trusted setup for Groth16 circuits. Do not use Lurk in production environments or anywhere else that security is necessary.
 
-## lurk and lurk-rs
-[```lurk-rs```](https://github.com/lurk-lab/lurk-rs) is the Rust implementation of Lurk, which generates binaries via ```rustc```. The Rust implementation supports expression evaluation, proof of correct evaluation, and proof verification. ```lurk-rs``` also provides preliminary support for WASM.
+## Yatima
+[Yatima](https://github.com/argumentcomputer/yatima) is a dependently typed, content addressed compiler from the [Lean Theorem Prover](https://github.com/leanprover/lean4) to Lurk. This enables formally verified zk-proofs of execution, whether it's abstract cryptography via [FFaCiL.lean](https://github.com/argumentcomputer/FFaCiL.lean) or interpreted WebAssembly code via [Wasm.lean](https://github.com/argumentcomputer/Wasm.lean).
 
-[```lurk```](https://github.com/lurk-lab/lurk) is a Common Lisp reference implementation of Lurk. This implementation only supports expression evaluation. The [language specification](https://github.com/lurk-lab/lurk/blob/master/spec/v0-1.md) lives in this repo, and the implementation provided there aims for simplicity and demonstration of the intended semantics without the proving tools of ```lurk-rs```.
+## Loam
+Loam is a reduction machine zkVM, purpose built to provide the smallest instruction set surface for the most performant verifiable virtual machine across a variety of back-ends.
 
-## Features of Lurk
-- Lurk program execution can be proved in zero knowledge.
-- Lurk proofs support multiple backend SNARK proving systems.
-- Lurk enables incremental computation and proofs in unbounded loops.
-- Lurk provides conditional control flow.
-- Lurk programs are data and vice versa.
-- Lurk data is content-addressable for compatibility with IPLD/IPFS.
+(Coming soon)
 
-# Yatima
-[Yatima](https://github.com/lurk-lab/yatima) is a dependently typed, content addressed compiler from the [Lean Theorem Prover](https://github.com/leanprover/lean4) to Lurk. This enables formally verified zk-proofs of execution, whether it's abstract cryptography via [FFaCiL.lean](https://github.com/lurk-lab/FFaCiL.lean) or interpreted WebAssembly code via [Wasm.lean](https://github.com/lurk-lab/Wasm.lean).
+## Light Clients
+[ZK Light Clients](https://github.com/argumentcomputer/zk-light-clients/) built in collaboration with the [Wormhole Foundation](https://wormhole.foundation/blog/wormhole-foundation-awards-contributor-grant-to-lurk-lab-to-bring-trustless-transfers-to-wormhole-with-zk-proofs) and [Kadena](https://www.kadena.io/blog/kadena-announces-partnership-with-lurk-lab-to-build-zk-bridge), enable ZK proof-based cross-chain interoperability.
+
+<br />
+
+# Contact Us
 
 ## Website
-Visit us on the web at https://lurk-lab.com or https://lurk-lang.org. 
+Visit us on the web at https://argument.xyz
 
 ## Zulip
-Come hang out on our [Zulip](https://zulip.lurk-lab.com). 
+Come hang out on our [Zulip](https://zulip.argument.xyz). 
 
 ## Twitter
-Follow [@LurkLab](https://twitter.com/LurkLab) on Twitter.
+Follow [@Argument_xyz](https://twitter.com/argument_xyz) on Twitter.
 
 ## License
 MIT or Apache 2.0
