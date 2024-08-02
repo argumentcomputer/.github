@@ -1,7 +1,4 @@
-# Welcome to Argument Computer Corporation
-<p align="center">
-  <img width="1000" height="192" src="/ArgumentComputerCorp_logo.png">
-</p>
+![](/ArgumentComputerCorp_logo.png)
 
 <br />
 
