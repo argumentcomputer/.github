@@ -1,8 +1,4 @@
-# Welcome to Argument Computer Corporation
-<p align="center">
-  <img width="1000" height="192" src="/ArgumentComputerCorp_logo.png">
-</p>
-
+![](/ArgumentComputerCorp_logo.png)
 <br />
 
 # Our Mission
@@ -21,6 +17,11 @@ Lurk is a programming language build for the domain of zero-knowledge proofs.
 
 ### Disclaimer
 **DISCLAIMER:** Lurk is an early research-stage language. Neither the cryptography nor the software has been audited, and there is currently no trusted setup for Groth16 circuits. Do not use Lurk in production environments or anywhere else that security is necessary.
+
+## Sphinx
+[Sphinx](https://github.com/argumentcomputer/sphinx) is our fork of [Succinct](https://succinct.xyz/) Labs' [SP1 zero-knowledge virtual machine (ZKVM)](https://github.com/succinctlabs/sp1).
+
+Sphinx underpins critical elements of our zero-knowledge proof efforts, including light clients in collaboration with [Wormhole](https://wormhole.foundation/blog/wormhole-foundation-awards-contributor-grant-to-lurk-lab-to-bring-trustless-transfers-to-wormhole-with-zk-proofs) and [Kadena](https://www.kadena.io/blog/kadena-announces-partnership-with-lurk-lab-to-build-zk-bridge). It also drives the forthcoming STARK engine of [Lurk](https://github.com/argumentcomputer/lurk-rs), Argument's next-generation zero-knowledge virtual machine
 
 ## Yatima
 [Yatima](https://github.com/argumentcomputer/yatima) is a dependently typed, content addressed compiler from the [Lean Theorem Prover](https://github.com/leanprover/lean4) to Lurk. This enables formally verified zk-proofs of execution, whether it's abstract cryptography via [FFaCiL.lean](https://github.com/argumentcomputer/FFaCiL.lean) or interpreted WebAssembly code via [Wasm.lean](https://github.com/argumentcomputer/Wasm.lean).
@@ -44,7 +45,7 @@ Visit us on the web at https://argument.xyz
 Come hang out on our [Zulip](https://zulip.argument.xyz). 
 
 ## Twitter
-Follow [@argument_xyz](https://twitter.com/argument_xyz) on Twitter.
+Follow [@argumentxyz](https://twitter.com/argumentxyz) on Twitter.
 
 ## License
 MIT or Apache 2.0
