@@ -16,7 +16,7 @@ Lurk is a programming language build for the domain of zero-knowledge proofs.
 [```lurk-rs```](https://github.com/argumentcomputer/lurk-rs) is the Rust implementation of Lurk, which generates binaries via ```rustc```. The Rust implementation supports expression evaluation, proof of correct evaluation, and proof verification. ```lurk-rs``` also provides preliminary support for WASM.
 
 ### Disclaimer
-**DISCLAIMER:** Lurk is an early research-stage language.Do not use Lurk in production environments or anywhere else that security is necessary.
+**DISCLAIMER:** Lurk is an early research-stage language. Do not use Lurk in production environments or anywhere else that security is necessary.
 
 ## Sphinx
 [Sphinx](https://github.com/argumentcomputer/sphinx) is our fork of [Succinct](https://succinct.xyz/) Labs' [SP1 zero-knowledge virtual machine (ZKVM)](https://github.com/succinctlabs/sp1).
