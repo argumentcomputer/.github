@@ -2,7 +2,7 @@
 <br />
 
 # Our Mission
-We are building the tools to accelerate verifiable computing. 
+Accelerate verifiable computing. 
 
 <br />
 
@@ -11,12 +11,12 @@ We are building the tools to accelerate verifiable computing.
 ## Lurk
 Lurk is a programming language build for the domain of zero-knowledge proofs. 
 
-[```lurk```](https://github.com/argumentcomputer/lurk-lisp) is a Common Lisp reference implementation of Lurk. This implementation only supports expression evaluation. The [language specification](https://github.com/argumentcomputer/lurk-lisp/blob/master/spec/v0-1.md) lives in this repo, and the implementation provided there aims for simplicity and demonstration of the intended semantics without the proving tools of ```lurk-rs```.
+[```lurk-lisp```](https://github.com/argumentcomputer/lurk-lisp) is a Common Lisp reference implementation of Lurk. This implementation only supports expression evaluation. The [language specification](https://github.com/argumentcomputer/lurk-lisp/blob/master/spec/v0-1.md) lives in this repo, and the implementation provided there aims for simplicity and demonstration of the intended semantics without the proving tools of ```lurk-rs```.
 
 [```lurk-rs```](https://github.com/argumentcomputer/lurk-rs) is the Rust implementation of Lurk, which generates binaries via ```rustc```. The Rust implementation supports expression evaluation, proof of correct evaluation, and proof verification. ```lurk-rs``` also provides preliminary support for WASM.
 
 ### Disclaimer
-**DISCLAIMER:** Lurk is an early research-stage language. Neither the cryptography nor the software has been audited, and there is currently no trusted setup for Groth16 circuits. Do not use Lurk in production environments or anywhere else that security is necessary.
+**DISCLAIMER:** Lurk is an early research-stage language. Do not use Lurk in production environments or anywhere else that security is necessary.
 
 ## Sphinx
 [Sphinx](https://github.com/argumentcomputer/sphinx) is our fork of [Succinct](https://succinct.xyz/) Labs' [SP1 zero-knowledge virtual machine (ZKVM)](https://github.com/succinctlabs/sp1).
@@ -42,7 +42,8 @@ Loam is a reduction machine zkVM, purpose built to provide the smallest instruct
 Visit us on the web at https://argument.xyz
 
 ## Zulip
-Come hang out on our [Zulip](https://zulip.argument.xyz). 
+
+Chat with us on our [Zulip](https://zulip.argument.xyz) forum. 
 
 ## Twitter
 Follow [@argumentxyz](https://twitter.com/argumentxyz) on Twitter.
