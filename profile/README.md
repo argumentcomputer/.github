@@ -9,11 +9,13 @@ Accelerate verifiable computing.
 # Our Products
 
 ## Lurk
-Lurk is a programming language build for the domain of zero-knowledge proofs. 
+Lurk is a programming language built for the domain of zero-knowledge proofs. 
 
-[```lurk-lisp```](https://github.com/argumentcomputer/lurk-lisp) is a Common Lisp reference implementation of Lurk. This implementation only supports expression evaluation. The [language specification](https://github.com/argumentcomputer/lurk-lisp/blob/master/spec/v0-1.md) lives in this repo, and the implementation provided there aims for simplicity and demonstration of the intended semantics without the proving tools of ```lurk-rs```.
+[```lurk```](https://github.com/argumentcomputer/lurk) is the newest and most performant implementation of Lurk, built on Plonky3 and [Sphinx](https://github.com/argumentcomputer/sphinx) (our friendly fork of SP1). It supports expression evaluation, proof of correct evaluation, and proof verification on a highly performant STARK backend. 
 
-[```lurk-rs```](https://github.com/argumentcomputer/lurk-rs) is the Rust implementation of Lurk, which generates binaries via ```rustc```. The Rust implementation supports expression evaluation, proof of correct evaluation, and proof verification. ```lurk-rs``` also provides preliminary support for WASM.
+[```lurk-beta```](https://github.com/argumentcomputer/lurk-beta) is the beta implementation of Lurk in Rust targetting Nova and SuperNova, which generates binaries via ```rustc```. The Rust implementation supports expression evaluation, proof of correct evaluation, and proof verification, with our SuperNova backend, [Arecibo](https://github.com/argumentcomputer/arecibo). ```lurk-beta``` also provides preliminary support for WASM.
+
+[```lurk-lisp```](https://github.com/argumentcomputer/lurk-lisp) was an early reference implementation of Lurk Alpha. This implementation only supports expression evaluation. The [language specification](https://github.com/argumentcomputer/lurk-lisp/blob/master/spec/v0-1.md) lives in this repo, and the implementation provided there aims for simplicity and demonstration of the intended semantics without the proving tools of ```lurk-rs```.
 
 ### Disclaimer
 **DISCLAIMER:** Lurk is an early research-stage language. Do not use Lurk in production environments or anywhere else that security is necessary.
