@@ -1,40 +1,35 @@
 ![](/ArgumentComputerCorp_logo.png)
 <br />
 
-# Our Mission
-Accelerate verifiable computing. 
+Accelerate Certified Computing. 
 
 <br />
 
-# Our Products
+# Our Projects
 
-## Lurk
-Lurk is a programming language built for the domain of zero-knowledge proofs. 
+## Ix
+[```ix```](https://github.com/argumentcomputer/ix) is a zero-knowledge proof-carrying code platform for [Lean 4](https://github.com/leanprover/lean4). Ix compiles Lean programs and proofs into succinct cryptographic certificates: instead of rechecking a formal proof, anyone can verify a small zk-SNARK attesting that the proof was checked. This extends classical proof-carrying code into zero-knowledge proof-carrying code (zkPCC), compressing even mathlib-scale developments into kilobyte-sized certificates that verify in milliseconds.
 
-[```lurk```](https://github.com/argumentcomputer/lurk) is the newest and most performant implementation of Lurk, built on Plonky3 and [Sphinx](https://github.com/argumentcomputer/sphinx) (our friendly fork of SP1). It supports expression evaluation, proof of correct evaluation, and proof verification on a highly performant STARK backend. 
+Ix consists of:
 
-[```lurk-beta```](https://github.com/argumentcomputer/lurk-beta) is the beta implementation of Lurk in Rust targetting Nova and SuperNova, which generates binaries via ```rustc```. The Rust implementation supports expression evaluation, proof of correct evaluation, and proof verification, with our SuperNova backend, [Arecibo](https://github.com/argumentcomputer/arecibo). ```lurk-beta``` also provides preliminary support for WASM.
+- the **Ix compiler**, which transforms Lean 4 into ```ixon```, a content-addressable serialization format
+- **Aiur**, a first-order functional zkDSL that generates multicircuit STARK proofs via [```multi-stark```](https://github.com/argumentcomputer/multi-stark)
+- the **IxVM**, which implements reduction, typechecking, and binary ingress/egress of ```ixon```
+- peer-to-peer sharing of ```ixon``` data via [Iroh](https://github.com/n0-computer/iroh)
 
-[```lurk-lisp```](https://github.com/argumentcomputer/lurk-lisp) was an early reference implementation of Lurk Alpha. This implementation only supports expression evaluation. The [language specification](https://github.com/argumentcomputer/lurk-lisp/blob/master/spec/v0-1.md) lives in this repo, and the implementation provided there aims for simplicity and demonstration of the intended semantics without the proving tools of ```lurk-rs```.
+**DISCLAIMER:** Ix is pre-alpha research software. Do not use Ix in production environments or anywhere else that security is necessary.
 
-### Disclaimer
-**DISCLAIMER:** Lurk is an early research-stage language. Do not use Lurk in production environments or anywhere else that security is necessary.
+## multi-stark
+[```multi-stark```](https://github.com/argumentcomputer/multi-stark) is a multicircuit STARK proving system built on [Plonky3](https://github.com/Plonky3/Plonky3). It proves and verifies multiple AIR circuits of independent trace heights in a single proof, with cross-circuit lookup arguments for shared state, preprocessed tables reusable across proofs, and generic parameterization over the field, hash function, and polynomial commitment scheme. ```multi-stark``` is the proving engine behind Ix's Aiur zkDSL.
 
-## Sphinx
-[Sphinx](https://github.com/argumentcomputer/sphinx) is our fork of [Succinct](https://succinct.xyz/) Labs' [SP1 zero-knowledge virtual machine (ZKVM)](https://github.com/succinctlabs/sp1).
+## Lean 4 tooling
+We build and maintain open-source tooling for the Lean 4 ecosystem, including:
 
-Sphinx underpins critical elements of our zero-knowledge proof efforts, including light clients in collaboration with [Wormhole](https://wormhole.foundation/blog/wormhole-foundation-awards-contributor-grant-to-lurk-lab-to-bring-trustless-transfers-to-wormhole-with-zk-proofs) and [Kadena](https://www.kadena.io/blog/kadena-announces-partnership-with-lurk-lab-to-build-zk-bridge). It also drives the forthcoming STARK engine of [Lurk](https://github.com/argumentcomputer/lurk-rs), Argument's next-generation zero-knowledge virtual machine
+- [```LSpec```](https://github.com/argumentcomputer/LSpec), a testing framework for Lean 4
+- [```Blake3.lean```](https://github.com/argumentcomputer/Blake3.lean), Lean 4 bindings to the BLAKE3 cryptographic hash function
+- [```lean-ffi```](https://github.com/argumentcomputer/lean-ffi), a Rust library for interfacing with the Lean 4 FFI
 
-## Yatima
-[Yatima](https://github.com/argumentcomputer/yatima) is a dependently typed, content addressed compiler from the [Lean Theorem Prover](https://github.com/leanprover/lean4) to Lurk. This enables formally verified zk-proofs of execution, whether it's abstract cryptography via [FFaCiL.lean](https://github.com/argumentcomputer/FFaCiL.lean) or interpreted WebAssembly code via [Wasm.lean](https://github.com/argumentcomputer/Wasm.lean).
-
-## Loam
-Loam is a reduction machine zkVM, purpose built to provide the smallest instruction set surface for the most performant verifiable virtual machine across a variety of back-ends.
-
-(Coming soon)
-
-## Light Clients
-[ZK Light Clients](https://github.com/argumentcomputer/zk-light-clients/) built in collaboration with the [Wormhole Foundation](https://wormhole.foundation/blog/wormhole-foundation-awards-contributor-grant-to-lurk-lab-to-bring-trustless-transfers-to-wormhole-with-zk-proofs) and [Kadena](https://www.kadena.io/blog/kadena-announces-partnership-with-lurk-lab-to-build-zk-bridge), enable ZK proof-based cross-chain interoperability.
+We also contribute to and maintain forks of ecosystem infrastructure such as [```lean4lean```](https://github.com/argumentcomputer/lean4lean), [```lean4-nix```](https://github.com/argumentcomputer/lean4-nix), and [```EVMYulLean```](https://github.com/argumentcomputer/EVMYulLean).
 
 <br />
 
@@ -46,9 +41,6 @@ Visit us on the web at https://argument.xyz
 ## Zulip
 
 Chat with us on our [Zulip](https://zulip.argument.xyz) forum. 
-
-## Twitter
-Follow [@argumentxyz](https://twitter.com/argumentxyz) on Twitter.
 
 ## License
 MIT or Apache 2.0
